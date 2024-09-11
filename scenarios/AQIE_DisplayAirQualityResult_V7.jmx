@@ -2938,7 +2938,7 @@ G lu ئ s z  PO     &#x1d;/ m &#x7f;=  &#x1a;   ^    &gt; ¬ Q&#x7f;* | &#x7;  &
         <intProp name="ThreadGroup.num_threads">204</intProp>
         <intProp name="ThreadGroup.ramp_time">416</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
-        <longProp name="ThreadGroup.delay">60</longProp>
+        <longProp name="ThreadGroup.delay">120</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -16089,7 +16089,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
         <intProp name="ThreadGroup.num_threads">204</intProp>
         <intProp name="ThreadGroup.ramp_time">416</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
-        <longProp name="ThreadGroup.delay">60</longProp>
+        <longProp name="ThreadGroup.delay">120</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -22855,7 +22855,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
         <intProp name="ThreadGroup.num_threads">204</intProp>
         <intProp name="ThreadGroup.ramp_time">416</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
-        <longProp name="ThreadGroup.delay">60</longProp>
+        <longProp name="ThreadGroup.delay">120</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
