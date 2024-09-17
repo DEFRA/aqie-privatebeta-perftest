@@ -31,7 +31,7 @@ if [ -n "$RESULTS_OUTPUT_S3_PATH" ]; then
         echo "Test results published to $RESULTS_OUTPUT_S3_PATH"
       fi
    else
-      echo "$JM_REPORTS is  not found"
+      echo "$JM_REPORTS is not found"
       exit 1
    fi
 else
