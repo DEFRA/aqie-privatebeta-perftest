@@ -6,7 +6,6 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
-      <boolProp name="TestPlan.functional_mode">false</boolProp>
     </TestPlan>
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -24,7 +23,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
         <boolProp name="HTTPSampler.image_parser">true</boolProp>
         <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
         <intProp name="HTTPSampler.concurrentPool">6</intProp>
@@ -36,13 +35,13 @@
         <stringProp name="HTTPSampler.implementation"></stringProp>
       </ConfigTestElement>
       <hashTree/>
-      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
         <boolProp name="clearEachIteration">true</boolProp>
         <boolProp name="useExpires">true</boolProp>
         <boolProp name="CacheManager.controlledByThread">false</boolProp>
       </CacheManager>
       <hashTree/>
-      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager">
         <collectionProp name="CookieManager.cookies"/>
         <boolProp name="CookieManager.clearEachIteration">true</boolProp>
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
@@ -16128,8 +16127,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           <stringProp name="variableName">RandomPMPollutant</stringProp>
         </RandomVariableConfig>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T01_LaunchURL" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T01_LaunchURL">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -17041,8 +17039,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T02_EnterPassword" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T02_EnterPassword">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -17924,8 +17921,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T03_ClickStartNow" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T03_ClickStartNow">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -18609,8 +18605,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T04_EnterPostcode&amp;Continue" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T04_EnterPostcode&amp;Continue">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -19381,8 +19376,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T06_SelectLinkUnderGases" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T06_SelectLinkUnderGases">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -20025,8 +20019,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T07_ClickBackLinkInBrowser" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T07_ClickBackLinkInBrowser">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -20830,8 +20823,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T08_SelectLinkUnderPM" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T08_SelectLinkUnderPM">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -21482,8 +21474,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T09_ClickBackLinkInBrowser" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T09_ClickBackLinkInBrowser">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -22084,8 +22075,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T10_ClickChangeLocationLink" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_PostcodeSearch_T10_ClickChangeLocationLink">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -22725,7 +22715,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
             <stringProp name="ConstantTimer.delay">300</stringProp>
           </ConstantTimer>
           <hashTree/>
@@ -28751,7 +28741,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -28788,7 +28778,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
