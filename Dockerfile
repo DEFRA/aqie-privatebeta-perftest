@@ -11,7 +11,7 @@ COPY saveservice.properties /opt/apache-jmeter-5.5/bin/saveservice.properties
 COPY system.properties /opt/apache-jmeter-5.5/bin/system.properties
 COPY upgrade.properties /opt/apache-jmeter-5.5/bin/upgrade.properties
 COPY log4j2.xml /opt/apache-jmeter-5.5/bin/log4j2.xml
-COPY entrypoint.sh
+COPY entrypoint.sh .
 ENV S3_ENDPOINT https://s3.eu-west-2.amazonaws.com
 ENV TEST_SCENARIO test
 
