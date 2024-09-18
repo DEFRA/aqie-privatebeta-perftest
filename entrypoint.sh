@@ -19,7 +19,9 @@ REPORTFILE=${NOW}-perftest-${TEST_SCENARIO}-report.csv
 LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 
 # Run the test suite
-jmeter -n -t ${SCENARIOFILE} -e -g "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f -Jenv="${ENVIRONMENT}"
+jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -j ${LOGFILE} -f -Jenv="${ENVIRONMENT}"
+# Generate the HTML report
+jmeter -g ${REPORTFILE} -o ${JM_REPORTS}
 test_exit_code=$?
 
 #### Path to the HTML report file###Avik
