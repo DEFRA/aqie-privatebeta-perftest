@@ -26,7 +26,7 @@ test_exit_code=$?
 
 #### Path to the HTML report file###Avik
 #REPORT_PATH="${JM_REPORTS}/content/pages/OverTime.html"
-REPORT_PATH="${REPORTFILE}"
+REPORT_PATH="/opt/perftest/${REPORTFILE}"
 # Check if the file exists
 if [ -f "$REPORT_PATH" ]; then
     # Read and print the content of the HTML report
