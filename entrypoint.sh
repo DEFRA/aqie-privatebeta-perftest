@@ -22,6 +22,17 @@ LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f -Jenv="${ENVIRONMENT}"
 test_exit_code=$?
 
+# Path to the HTML report file###Avik
+REPORT_PATH="${JM_REPORTS}/content/pages/OverTime.html"
+
+# Check if the file exists
+if [ -f "$REPORT_PATH" ]; then
+    # Read and print the content of the HTML report
+    cat "$REPORT_PATH"
+else
+    echo "Report file not found at $REPORT_PATH"
+fi
+
 # Publish the results into S3 so they can be displayed in the CDP Portal
 # CDP Portal assumes test suite always produce a single html file
 if [ -n "$RESULTS_OUTPUT_S3_PATH" ]; then
