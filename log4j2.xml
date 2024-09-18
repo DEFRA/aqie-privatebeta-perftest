@@ -44,6 +44,10 @@
       </PatternLayout>
     </GuiLogEvent>
 
+    <Console name="console" target="SYSTEM_OUT">
+    <PatternLayout pattern="[%highlight{%-5level}] %d{DEFAULT} %c{1}.%M() - %msg%n%throwable{short.lineNumber}" />
+</Console>
+
   </Appenders>
 
   <Loggers>
@@ -51,6 +55,7 @@
     <Root level="info">
       <AppenderRef ref="jmeter-log" />
       <AppenderRef ref="gui-log-event" />
+      <AppenderRef ref="console" />
     </Root>
 
     <Logger name="org.apache.jmeter.junit" level="debug" />
