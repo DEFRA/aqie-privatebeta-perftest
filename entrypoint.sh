@@ -26,13 +26,21 @@ test_exit_code=$?
 
 #### Path to the HTML report file###Avik
 #REPORT_PATH="${JM_REPORTS}/content/pages/OverTime.html"
-REPORT_PATH="/opt/perftest/${REPORTFILE}"
+
 # Check if the file exists
-if [ -f "$REPORT_PATH" ]; then
+#if [ -f "$REPORT_PATH" ]; then
     # Read and print the content of the HTML report
-    cat "$REPORT_PATH"
+#    cat "$REPORT_PATH"
+#else
+#    echo "Report file not found at $REPORT_PATH"
+#fi
+
+# Check if the file exists and print its content
+if [ -f "$REPORTFILE" ]; then
+    # Read and print the content of the CSV report
+    cat "$REPORTFILE"
 else
-    echo "Report file not found at $REPORT_PATH"
+    echo "Report file not found at $REPORTFILE"
 fi
 
 # Publish the results into S3 so they can be displayed in the CDP Portal
