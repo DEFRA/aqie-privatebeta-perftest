@@ -20,6 +20,41 @@ LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 
 # Run the test suite
 jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -j ${LOGFILE} -f -Jenv="${ENVIRONMENT}"
+
+
+
+###############Update the CSV file######################
+# Path to the original CSV file
+ORIGINAL_CSV="$REPORTFILE"
+# Path to the updated CSV file
+UPDATED_CSV="$REPORTFILE"
+
+# Function to convert mm:ss.0 to yyyy/MM/dd HH:mm:ss
+convert_to_human_readable() {
+    local timestamp=$1
+    local minutes=${timestamp%:*}
+    local seconds=${timestamp#*:}
+    local total_seconds=$((minutes * 60 + seconds))
+    date -d "@$total_seconds" +"%Y/%m/%d %H:%M:%S"
+}
+
+# Read the original CSV file and update the timestamp format
+awk -F, 'BEGIN {OFS=","} 
+{
+    if (NR == 1) {
+        print $0  # Print header as is
+    } else {
+        cmd = "date -d \"1970-01-01 " $1 "\" +\"%Y/%m/%d %H:%M:%S\""
+        cmd | getline $1
+        close(cmd)
+        print $0
+    }
+}' "$ORIGINAL_CSV" > "$UPDATED_CSV"
+
+echo "Timestamp format updated and saved to $UPDATED_CSV"
+
+
+
 # Generate the HTML report
 jmeter -g ${REPORTFILE} -o ${JM_REPORTS}
 test_exit_code=$?
@@ -36,12 +71,12 @@ test_exit_code=$?
 #fi
 
 # Check if the file exists and print its content
-if [ -f "$REPORTFILE" ]; then
+#if [ -f "$REPORTFILE" ]; then
     # Read and print the content of the CSV report
-    cat "$REPORTFILE"
-else
-    echo "Report file not found at $REPORTFILE"
-fi
+#    cat "$REPORTFILE"
+#else
+#    echo "Report file not found at $REPORTFILE"
+#fi
 
 # Publish the results into S3 so they can be displayed in the CDP Portal
 # CDP Portal assumes test suite always produce a single html file
