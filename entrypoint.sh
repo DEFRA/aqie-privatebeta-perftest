@@ -19,12 +19,12 @@ REPORTFILE=${NOW}-perftest-${TEST_SCENARIO}-report.csv
 LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 
 # Run the test suite
-jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f -Jenv="${ENVIRONMENT}"
+jmeter -n -t ${SCENARIOFILE} -e -g "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f -Jenv="${ENVIRONMENT}"
 test_exit_code=$?
 
-# Path to the HTML report file###Avik
-REPORT_PATH="${JM_REPORTS}/content/pages/OverTime.html"
-
+#### Path to the HTML report file###Avik
+#REPORT_PATH="${JM_REPORTS}/content/pages/OverTime.html"
+REPORT_PATH="${REPORTFILE}"
 # Check if the file exists
 if [ -f "$REPORT_PATH" ]; then
     # Read and print the content of the HTML report
