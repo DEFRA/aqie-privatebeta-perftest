@@ -24,12 +24,12 @@ test_exit_code=$?
 
 ########################################Avik############################################
 # Check if the file exists and print its content
-#if [ -f "$JM_REPORTS/content/pages/OverTime.html" ]; then
+if [ -f "$JM_REPORTS/index.html" ]; then
     # Read and print the content of the CSV report
-#    cat "$JM_REPORTS/content/pages/OverTime.html"
-#else
-#   echo "Report file not found at $LOGFILE"
-#fi
+    cat "$JM_REPORTS/index.html"
+else
+   echo "Report file not found at $LOGFILE"
+fi
 
 
 
