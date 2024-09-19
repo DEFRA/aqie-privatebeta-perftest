@@ -12,6 +12,7 @@ COPY jmeter.properties /opt/apache-jmeter-5.5/bin/jmeter.properties
 COPY log4j2.xml /opt/apache-jmeter-5.5/bin/log4j2.xml
 COPY index.html /opt/perftest/index.html
 COPY OverTime.html /opt/perftest/OverTime.html
+COPY ResponseTimes.html /opt/perftest/ResponseTimes.html
 #COPY graph.js /opt/apache-jmeter-5.5/bin/report-template/content/js/graph.js
 #COPY dashboard-commons.js /opt/apache-jmeter-5.5/bin/report-template/content/js/dashboard-commons.js
 #COPY dashboard.js /opt/apache-jmeter-5.5/bin/report-template/content/js/dashboard.js
