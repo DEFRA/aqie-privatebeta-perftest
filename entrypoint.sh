@@ -15,7 +15,7 @@ JM_LOGS=${JM_HOME}/logs
 mkdir -p ${JM_REPORTS} ${JM_LOGS}
 
 SCENARIOFILE=${JM_SCENARIOS}/AQIE_DisplayAirQualityResult_Debug.jmx
-REPORTFILE=${NOW}-perftest-${TEST_SCENARIO}-report.jtl
+REPORTFILE=${NOW}-perftest-${TEST_SCENARIO}-report.csv
 LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 
 # Run the test suite
