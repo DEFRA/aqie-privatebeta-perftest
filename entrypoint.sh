@@ -23,9 +23,9 @@ jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE
 test_exit_code=$?
 
 # Check if the file exists and print its content
-if [ -f "$JM_REPORTS/content/js/graph.js" ]; then
+if [ -f "$JM_REPORTS/content/pages/OverTime.html" ]; then
     # Read and print the content of the CSV report
-    cat "$JM_REPORTS/content/js/graph.js"
+    cat "$JM_REPORTS/content/pages/OverTime.html"
 else
    echo "Report file not found at $LOGFILE"
 fi
