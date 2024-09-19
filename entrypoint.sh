@@ -31,6 +31,17 @@ else
 fi
 
 
+# Define the HTML file and the value to search for
+HTML_FILE="$JM_REPORTS/content/pages/OverTime.html"
+SEARCH_VALUE="</html>"
+
+# Check if the file contains the search value
+if grep -q "$SEARCH_VALUE" "$HTML_FILE"; then
+    echo "Value '$SEARCH_VALUE' found in $HTML_FILE."
+else
+    echo "No value '$SEARCH_VALUE' present in $HTML_FILE."
+fi
+
 
 # Publish the results into S3 so they can be displayed in the CDP Portal
 # CDP Portal assumes test suite always produce a single html file
