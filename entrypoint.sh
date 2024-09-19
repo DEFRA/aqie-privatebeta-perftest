@@ -22,52 +22,88 @@ LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f -Jenv="${ENVIRONMENT}"
 test_exit_code=$?
 
-#!/bin/bash
+#############################################################################################
+# Define the HTML file
+HTML_FILE="$JM_REPORTS/index.html"
 
-# Define the HTML file and the start and end strings
-HTML_FILE="$JM_REPORTS/content/pages/OverTime.html"
-START_STRING="<td>Start Time:</td>"
-END_STRING="</tr>"
+# Extract the Start Time value
+START_TIME=$(grep -oP '(?<=Start Time: ).*?(?=</td>)' "$HTML_FILE")
+END_TIME=$(grep -oP '(?<=End Time: ).*?(?=</td>)' "$HTML_FILE")
+File=$(grep -oP '(?<=File: ).*?(?=</td>)' "$HTML_FILE")
 
-# Use awk to find and print the values between the start and end strings
-awk -v start="$START_STRING" -v end="$END_STRING" '
-    BEGIN { found=0 }
-    {
-        if (index($0, start)) { found=1; sub(".*"start, ""); }
-        if (found) { print; }
-        if (index($0, end)) { found=0; sub(end".*", ""); }
-    }
-' "$HTML_FILE"
+# Print the Start Time
+if [ -n "$START_TIME" ]; then
+    echo "Start Time: $START_TIME"
+    echo "END TIME: $END_TIME"
+    echo "File: $File"
+else
+    echo "not found in $HTML_FILE."
+fi
 
-# Define the HTML file and the start and end strings
-HTML_FILE="$JM_REPORTS/content/pages/OverTime.html"
-START_STRING="<td>End Time:</td>"
-END_STRING="</tr>"
+# Define the source and destination paths
+SOURCE_PATH="/opt/perftest/index.html"
+DESTINATION_PATH="$JM_REPORTS/index.html"
 
-# Use awk to find and print the values between the start and end strings
-awk -v start="$START_STRING" -v end="$END_STRING" '
-    BEGIN { found=0 }
-    {
-        if (index($0, start)) { found=1; sub(".*"start, ""); }
-        if (found) { print; }
-        if (index($0, end)) { found=0; sub(end".*", ""); }
-    }
-' "$HTML_FILE"
+# Copy the index.html file from the source to the destination
+cp "$SOURCE_PATH" "$DESTINATION_PATH"
 
-# Define the HTML file and the start and end strings
-HTML_FILE="$JM_REPORTS/content/pages/OverTime.html"
-START_STRING="<td>File:</td>"
-END_STRING="</tr>"
+# Check if the copy was successful
+if [ $? -eq 0 ]; then
+    echo "File copied successfully."
+else
+    echo "Failed to copy the file."
+    exit 1
+fi
 
-# Use awk to find and print the values between the start and end strings
-awk -v start="$START_STRING" -v end="$END_STRING" '
-    BEGIN { found=0 }
-    {
-        if (index($0, start)) { found=1; sub(".*"start, ""); }
-        if (found) { print; }
-        if (index($0, end)) { found=0; sub(end".*", ""); }
-    }
-' "$HTML_FILE"
+
+# Use awk to update the START_TIME, END_TIME, and File values in the destination file
+awk -v start_time="$START_TIME" -v end_time="$END_TIME" -v new_file="$File" '
+    /Start Time:/ { sub(/Start Time: .*/, "Start Time: " start_time "</td>") }
+    /End Time:/ { sub(/End Time: .*/, "End Time: " end_time "</td>") }
+    /File:/ { sub(/File: .*/, "File: " new_file "</td>") }
+    { print }
+' "$DESTINATION_PATH" > "${DESTINATION_PATH}.tmp" && mv "${DESTINATION_PATH}.tmp" "$DESTINATION_PATH"
+
+# Check if the updates were successful
+if [ $? -eq 0 ]; then
+    echo "Values updated successfully."
+else
+    echo "Failed to update values."
+    exit 1
+fi
+
+# Define the source and destination paths
+SOURCE_PATH="/opt/perftest/OverTime.html"
+DESTINATION_PATH="$JM_REPORTS/content/pages/OverTime.html"
+
+# Copy the index.html file from the source to the destination
+cp "$SOURCE_PATH" "$DESTINATION_PATH"
+
+# Check if the copy was successful
+if [ $? -eq 0 ]; then
+    echo "File copied successfully."
+else
+    echo "Failed to copy the file."
+    exit 1
+fi
+
+
+# Use awk to update the START_TIME, END_TIME, and File values in the destination file
+awk -v start_time="$START_TIME" -v end_time="$END_TIME" -v new_file="$File" '
+    /Start Time:/ { sub(/Start Time: .*/, "Start Time: " start_time "</td>") }
+    /End Time:/ { sub(/End Time: .*/, "End Time: " end_time "</td>") }
+    /File:/ { sub(/File: .*/, "File: " new_file "</td>") }
+    { print }
+' "$DESTINATION_PATH" > "${DESTINATION_PATH}.tmp" && mv "${DESTINATION_PATH}.tmp" "$DESTINATION_PATH"
+
+# Check if the updates were successful
+if [ $? -eq 0 ]; then
+    echo "Values updated successfully."
+else
+    echo "Failed to update values."
+    exit 1
+fi
+##########################################################################################
 
 
 # Publish the results into S3 so they can be displayed in the CDP Portal
