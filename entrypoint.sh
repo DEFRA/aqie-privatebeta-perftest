@@ -22,18 +22,21 @@ LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f -Jenv="${ENVIRONMENT}"
 test_exit_code=$?
 
+########################################Avik############################################
 # Check if the file exists and print its content
-if [ -f "$JM_REPORTS/content/pages/OverTime.html" ]; then
+#if [ -f "$JM_REPORTS/content/pages/OverTime.html" ]; then
     # Read and print the content of the CSV report
-    cat "$JM_REPORTS/content/pages/OverTime.html"
-else
-   echo "Report file not found at $LOGFILE"
-fi
+#    cat "$JM_REPORTS/content/pages/OverTime.html"
+#else
+#   echo "Report file not found at $LOGFILE"
+#fi
+
 
 
 # Define the HTML file and the value to search for
-HTML_FILE="$JM_REPORTS/content/pages/OverTime.html"
-SEARCH_VALUE="</html>"
+HTML_FILE="$JM_REPORTS/index.html"
+SEARCH_VALUE="graph.js"
+SEARCH_VALUE1="</html>"
 
 # Check if the file contains the search value
 if grep -q "$SEARCH_VALUE" "$HTML_FILE"; then
@@ -42,6 +45,13 @@ else
     echo "No value '$SEARCH_VALUE' present in $HTML_FILE."
 fi
 
+# Check if the file contains the search value
+if grep -q "$SEARCH_VALUE1" "$HTML_FILE"; then
+    echo "Value '$SEARCH_VALUE1' found in $HTML_FILE."
+else
+    echo "No value '$SEARCH_VALUE1' present in $HTML_FILE."
+fi
+###########################################################################################
 
 # Publish the results into S3 so they can be displayed in the CDP Portal
 # CDP Portal assumes test suite always produce a single html file
