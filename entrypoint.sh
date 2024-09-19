@@ -20,14 +20,14 @@ LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 
 # Run the test suite
 jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f -Jenv="${ENVIRONMENT}"
-
+test_exit_code=$?
 
 # Check if the file exists and print its content
-if [ -f "$REPORTFILE" ]; then
+if [ -f "$LOGFILE" ]; then
     # Read and print the content of the CSV report
-    cat "$REPORTFILE"
+    cat "$LOGFILE"
 else
-   echo "Report file not found at $REPORTFILE"
+   echo "Report file not found at $LOGFILE"
 fi
 
 
