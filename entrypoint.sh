@@ -54,47 +54,13 @@ test_exit_code=$?
 
 
 
-# Define the HTML file and the content to append
-HTML_FILE="$JM_REPORTS/index.html"
-CONTENT='
-    <!-- jQuery -->
-    <script src="sbadmin2-1.0.7/bower_components/jquery/dist/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="sbadmin2-1.0.7/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot/excanvas.min.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.pie.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.resize.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.time.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot-axislabels/jquery.flot.axislabels.js"></script>
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="sbadmin2-1.0.7/bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-    <script src="content/js/dashboard-commons.js"></script>
-    <script src="content/js/dashboard.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="sbadmin2-1.0.7/dist/js/sb-admin-2.js"></script>
-    <script type="text/javascript" src="content/js/jquery.tablesorter.min.js"></script>
-'
-
-# Use sed to insert the content before the </body> tag
-sed -i "/<\/body>/i $CONTENT" "$HTML_FILE"
-
-# Check if the append was successful
-if [ $? -eq 0 ]; then
-    echo "Content appended successfully before in Index HTML</body>."
-else
-    echo "Failed to append content Index HTML."
-fi
 
 
 
 
 # Define the HTML file and the content to append
 HTML_FILE="$JM_REPORTS/content/pages/OverTime.html"
+TEMP_FILE="/opt/perftest/temp_file.html"
 CONTENT='
     <!-- /#wrapper -->
 
@@ -129,8 +95,14 @@ CONTENT='
     <script src="../../sbadmin2-1.0.7/dist/js/sb-admin-2.js"></script>
 '
 
-# Use sed to insert the content before the </body> tag
-sed -i "/<\/body>/i $CONTENT" "$HTML_FILE"
+# Create a temporary file and insert the content before the </body> tag
+awk -v content="$CONTENT" '
+    /<\/body>/ { print content }
+    { print }
+' "$HTML_FILE" > "$TEMP_FILE"
+
+# Move the temporary file to the original file
+mv "$TEMP_FILE" "$HTML_FILE"
 
 # Check if the append was successful
 if [ $? -eq 0 ]; then
@@ -140,6 +112,48 @@ else
 fi
 
 
+# Define the HTML file and the content to append
+HTML_FILE="$JM_REPORTS/index.html"
+TEMP_FILE="/opt/perftest/temp_file1.html"
+CONTENT='
+    <!-- jQuery -->
+    <script src="sbadmin2-1.0.7/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="sbadmin2-1.0.7/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="sbadmin2-1.0.7/bower_components/flot/excanvas.min.js"></script>
+    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.js"></script>
+    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.pie.js"></script>
+    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.resize.js"></script>
+    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.time.js"></script>
+    <script src="sbadmin2-1.0.7/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="sbadmin2-1.0.7/bower_components/flot-axislabels/jquery.flot.axislabels.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="sbadmin2-1.0.7/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <script src="content/js/dashboard-commons.js"></script>
+    <script src="content/js/dashboard.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="sbadmin2-1.0.7/dist/js/sb-admin-2.js"></script>
+    <script type="text/javascript" src="content/js/jquery.tablesorter.min.js"></script>
+'
+
+# Create a temporary file and insert the content before the </body> tag
+awk -v content="$CONTENT" '
+    /<\/body>/ { print content }
+    { print }
+' "$HTML_FILE" > "$TEMP_FILE"
+
+# Move the temporary file to the original file
+mv "$TEMP_FILE" "$HTML_FILE"
+
+# Check if the append was successful
+if [ $? -eq 0 ]; then
+    echo "Content appended successfully before </body> in Index."
+else
+    echo "Failed to append content Index."
+fi
 
 ###########################################################################################
 
