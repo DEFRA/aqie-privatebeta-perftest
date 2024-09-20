@@ -22,19 +22,17 @@ LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f -Jenv="${ENVIRONMENT}"
 test_exit_code=$?
 
-
-
-
 # Publish the results into S3 so they can be displayed in the CDP Portal
-# CDP Portal assumes test suite always produce a single html file
 if [ -n "$RESULTS_OUTPUT_S3_PATH" ]; then
+  # Copy the CSV report file and the generated report files to the S3 bucket
    if [ -f "$JM_REPORTS/index.html" ]; then
-      aws --endpoint-url=$S3_ENDPOINT s3 cp "$JM_REPORTS/index.html" "$RESULTS_OUTPUT_S3_PATH/index.html"
+      aws --endpoint-url=$S3_ENDPOINT s3 cp "$REPORTFILE" "$RESULTS_OUTPUT_S3_PATH/$REPORTFILE"
+      aws --endpoint-url=$S3_ENDPOINT s3 cp "$JM_REPORTS" "$RESULTS_OUTPUT_S3_PATH" --recursive
       if [ $? -eq 0 ]; then
-        echo "Test results published to $RESULTS_OUTPUT_S3_PATH"
+        echo "CSV report file and test results published to $RESULTS_OUTPUT_S3_PATH"
       fi
    else
-      echo "$JM_REPORTS is not found"
+      echo "$JM_REPORTS/index.html is not found"
       exit 1
    fi
 else
