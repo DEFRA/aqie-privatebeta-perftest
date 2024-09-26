@@ -48,7 +48,7 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LocationBasedSearch_ESW">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LocationBasedSearch_ESW" enabled="true">
         <stringProp name="TestPlan.comments">//204</stringProp>
         <intProp name="ThreadGroup.num_threads">204</intProp>
         <intProp name="ThreadGroup.ramp_time">720</intProp>
@@ -2935,7 +2935,7 @@ G lu ئ s z  PO     &#x1d;/ m &#x7f;=  &#x1a;   ^    &gt; ¬ Q&#x7f;* | &#x7;  &
         </DebugSampler>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LocationListBasedSearch_ESW">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LocationListBasedSearch_ESW" enabled="true">
         <intProp name="ThreadGroup.num_threads">204</intProp>
         <intProp name="ThreadGroup.ramp_time">720</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
@@ -3886,7 +3886,7 @@ G lu ئ s z  PO     &#x1d;/ m &#x7f;=  &#x1a;   ^    &gt; ¬ Q&#x7f;* | &#x7;  &
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
             <stringProp name="ConstantTimer.delay">300</stringProp>
           </ConstantTimer>
           <hashTree/>
@@ -9310,7 +9310,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
         </DebugSampler>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearch_NorthernIreland">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearch_NorthernIreland" enabled="true">
         <intProp name="ThreadGroup.num_threads">204</intProp>
         <intProp name="ThreadGroup.ramp_time">720</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
@@ -9323,7 +9323,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="filename">NIPostcode.csv</stringProp>
@@ -9335,7 +9335,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           <stringProp name="variableNames"></stringProp>
         </CSVDataSet>
         <hashTree/>
-        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="RandomGasPollutant">
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="RandomGasPollutant" enabled="true">
           <stringProp name="maximumValue">3</stringProp>
           <stringProp name="minimumValue">1</stringProp>
           <stringProp name="outputFormat"></stringProp>
@@ -9344,7 +9344,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           <stringProp name="variableName">RandomGasPollutant</stringProp>
         </RandomVariableConfig>
         <hashTree/>
-        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="RandomPMPollutant">
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="RandomPMPollutant" enabled="true">
           <stringProp name="maximumValue">5</stringProp>
           <stringProp name="minimumValue">4</stringProp>
           <stringProp name="outputFormat"></stringProp>
@@ -9353,12 +9353,12 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           <stringProp name="variableName">RandomPMPollutant</stringProp>
         </RandomVariableConfig>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T01_LaunchURL">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T01_LaunchURL" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T01_LaunchURL-00">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T01_LaunchURL-00" enabled="true">
             <stringProp name="HTTPSampler.domain">aqie-front-end.perf-test.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -10261,12 +10261,12 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
             <stringProp name="ConstantTimer.delay">300</stringProp>
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T02_EnterPassword">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T02_EnterPassword" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -10319,7 +10319,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T02_EnterPassword-01">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T02_EnterPassword-01" enabled="true">
             <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
             <stringProp name="HTTPSampler.domain">aqie-front-end.perf-test.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
@@ -10436,7 +10436,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T02_EnterPassword-02">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T02_EnterPassword-02" enabled="true">
             <stringProp name="HTTPSampler.domain">aqie-front-end.perf-test.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -11149,12 +11149,12 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T03_ClickStartNow">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T03_ClickStartNow" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T03_ClickStartNow-0">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T03_ClickStartNow-0" enabled="true">
             <stringProp name="HTTPSampler.domain">aqie-front-end.perf-test.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -11834,12 +11834,12 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T04_EnterPostcode&amp;Continue">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T04_EnterPostcode&amp;Continue" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T04_EnterPostcode&amp;Continue-0">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T04_EnterPostcode&amp;Continue-0" enabled="true">
             <stringProp name="HTTPSampler.domain">aqie-front-end.perf-test.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -12618,12 +12618,12 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T06_SelectLinkUnderGases">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T06_SelectLinkUnderGases" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T06_SelectLinkUnderGases-0">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T06_SelectLinkUnderGases-0" enabled="true">
             <stringProp name="HTTPSampler.domain">aqie-front-end.perf-test.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -13262,12 +13262,12 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T07_ClickBackLinkInBrowser">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T07_ClickBackLinkInBrowser" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T07_ClickBackLinkInBrowser-00">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T07_ClickBackLinkInBrowser-00" enabled="true">
             <stringProp name="HTTPSampler.domain">aqie-front-end.perf-test.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -14067,12 +14067,12 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T08_SelectLinkUnderPM">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T08_SelectLinkUnderPM" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T08_SelectLinkUnderPM-0">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T08_SelectLinkUnderPM-0" enabled="true">
             <stringProp name="HTTPSampler.domain">aqie-front-end.perf-test.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -14719,12 +14719,12 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T09_ClickBackLinkInBrowser">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T09_ClickBackLinkInBrowser" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T09_ClickBackLinkInBrowser-0">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T09_ClickBackLinkInBrowser-0" enabled="true">
             <stringProp name="HTTPSampler.domain">aqie-front-end.perf-test.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -15321,12 +15321,12 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T10_ClickChangeLocationLink">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_NI_PostcodeSearch_T10_ClickChangeLocationLink" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T10_ClickChangeLocationLink-0">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T10_ClickChangeLocationLink-0" enabled="true">
             <stringProp name="HTTPSampler.domain">aqie-front-end.perf-test.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
@@ -15972,7 +15972,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T11_CloseBrowser-0">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AQIE_NI_PostcodeSearch_T11_CloseBrowser-0" enabled="true">
             <stringProp name="HTTPSampler.domain">region1.google-analytics.com</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -16087,7 +16087,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearch_ESW">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearch_ESW" enabled="true">
         <intProp name="ThreadGroup.num_threads">204</intProp>
         <intProp name="ThreadGroup.ramp_time">720</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
@@ -22852,7 +22852,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
         </DebugSampler>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearchList_ESW">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearchList_ESW" enabled="true">
         <intProp name="ThreadGroup.num_threads">204</intProp>
         <intProp name="ThreadGroup.ramp_time">720</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
@@ -24788,7 +24788,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="-72" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="-72">
             <stringProp name="HTTPSampler.domain">aqie-front-end.perf-test.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -24912,7 +24912,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
               <stringProp name="Scope.variable">SelectedLocation</stringProp>
             </BoundaryExtractor>
             <hashTree/>
-            <BoundaryExtractor guiclass="BoundaryExtractorGui" testclass="BoundaryExtractor" testname="Boundary Extractor" enabled="true">
+            <BoundaryExtractor guiclass="BoundaryExtractorGui" testclass="BoundaryExtractor" testname="Boundary Extractor">
               <stringProp name="BoundaryExtractor.useHeaders">unescaped</stringProp>
               <stringProp name="BoundaryExtractor.refname">pPC</stringProp>
               <stringProp name="BoundaryExtractor.lboundary">&lt;a href=/</stringProp>
@@ -24924,11 +24924,11 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
               <stringProp name="Scope.variable">SelectedPostCode</stringProp>
             </BoundaryExtractor>
             <hashTree/>
-            <BoundaryExtractor guiclass="BoundaryExtractorGui" testclass="BoundaryExtractor" testname="Boundary Extractor" enabled="true">
+            <BoundaryExtractor guiclass="BoundaryExtractorGui" testclass="BoundaryExtractor" testname="Boundary Extractor">
               <stringProp name="BoundaryExtractor.useHeaders">unescaped</stringProp>
               <stringProp name="BoundaryExtractor.refname">pPostCode</stringProp>
-              <stringProp name="BoundaryExtractor.lboundary">&lt;mark&gt;</stringProp>
-              <stringProp name="BoundaryExtractor.rboundary">&lt;/mark&gt;</stringProp>
+              <stringProp name="BoundaryExtractor.lboundary">&lt;span class=&quot;govuk-!-font-weight-bold&quot;&gt;</stringProp>
+              <stringProp name="BoundaryExtractor.rboundary">&lt;/span&gt;</stringProp>
               <stringProp name="BoundaryExtractor.default"></stringProp>
               <boolProp name="BoundaryExtractor.default_empty_value">false</boolProp>
               <stringProp name="BoundaryExtractor.match_number">0</stringProp>
