@@ -22,7 +22,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
         <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
         <intProp name="HTTPSampler.concurrentPool">6</intProp>
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -114,7 +114,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="RandomGasPollutant" enabled="true">
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="RandomGasPollutant">
           <stringProp name="maximumValue">5</stringProp>
           <stringProp name="minimumValue">3</stringProp>
           <stringProp name="outputFormat"></stringProp>
@@ -132,7 +132,7 @@
           <stringProp name="variableName">RandomPMPollutant</stringProp>
         </RandomVariableConfig>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="filename">LocationSearch.csv</stringProp>
@@ -144,13 +144,13 @@
           <stringProp name="variableNames"></stringProp>
         </CSVDataSet>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_LocationSearch_T01_LaunchURL" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AQIE_ESW_LocationSearch_T01_LaunchURL">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="-22" enabled="true">
-            <stringProp name="HTTPSampler.domain">${BASE_URL}</stringProp>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="-22">
+            <stringProp name="HTTPSampler.domain">aqie-front-end.dev.cdp-int.defra.cloud</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -164,7 +164,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-113479439">Check air quality</stringProp>
               </collectionProp>
@@ -2953,7 +2953,7 @@ G lu ئ s z  PO     &#x1d;/ m &#x7f;=  &#x1a;   ^    &gt; ¬ Q&#x7f;* | &#x7;  &
         </DebugSampler>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LocationListBasedSearch_ESW">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LocationListBasedSearch_ESW" enabled="false">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
@@ -9135,7 +9135,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
         </DebugSampler>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearch_NorthernIreland">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearch_NorthernIreland" enabled="false">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
@@ -15862,7 +15862,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearch_ESW">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearch_ESW" enabled="false">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
