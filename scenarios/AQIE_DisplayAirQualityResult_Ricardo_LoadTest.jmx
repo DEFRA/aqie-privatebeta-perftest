@@ -104,7 +104,7 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LocationBasedSearch_ESW">
         <stringProp name="TestPlan.comments">//204</stringProp>
         <intProp name="ThreadGroup.num_threads">255</intProp>
-        <intProp name="ThreadGroup.ramp_time">765</intProp>
+        <intProp name="ThreadGroup.ramp_time">2550</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
         <longProp name="ThreadGroup.delay">0</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -116,7 +116,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="RandomGasPollutant" enabled="true">
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="RandomGasPollutant">
           <stringProp name="maximumValue">5</stringProp>
           <stringProp name="minimumValue">3</stringProp>
           <stringProp name="outputFormat"></stringProp>
@@ -2957,7 +2957,7 @@ G lu ئ s z  PO     &#x1d;/ m &#x7f;=  &#x1a;   ^    &gt; ¬ Q&#x7f;* | &#x7;  &
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LocationListBasedSearch_ESW">
         <intProp name="ThreadGroup.num_threads">255</intProp>
-        <intProp name="ThreadGroup.ramp_time">765</intProp>
+        <intProp name="ThreadGroup.ramp_time">2550</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
         <longProp name="ThreadGroup.delay">90</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -9140,7 +9140,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearch_NorthernIreland">
         <intProp name="ThreadGroup.num_threads">255</intProp>
-        <intProp name="ThreadGroup.ramp_time">1020</intProp>
+        <intProp name="ThreadGroup.ramp_time">2550</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
         <longProp name="ThreadGroup.delay">90</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -15868,7 +15868,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PostcodeSearch_ESW">
         <intProp name="ThreadGroup.num_threads">255</intProp>
-        <intProp name="ThreadGroup.ramp_time">765</intProp>
+        <intProp name="ThreadGroup.ramp_time">2550</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
         <longProp name="ThreadGroup.delay">90</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
