@@ -14,7 +14,7 @@ JM_LOGS=${JM_HOME}/logs
 
 mkdir -p ${JM_REPORTS} ${JM_LOGS}
 
-SCENARIOFILE=${JM_SCENARIOS}/AQIE_DisplayAirQualityResult_Bookmark_LoadTest.jmx
+SCENARIOFILE=${JM_SCENARIOS}/AQIE_Bookmark_PERF_Sample.jmx
 REPORTFILE=${NOW}-perftest-${TEST_SCENARIO}-report.csv
 LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 
