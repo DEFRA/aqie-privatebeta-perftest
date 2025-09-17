@@ -97,7 +97,7 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LocationBasedSearch_ESW" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LocationBasedSearch_ESW">
         <stringProp name="TestPlan.comments">//255 765</stringProp>
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
@@ -15911,7 +15911,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="-81" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="-81">
             <stringProp name="HTTPSampler.domain">${BASE_URL}</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -15926,7 +15926,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="Sec-Fetch-Mode" elementType="Header">
                   <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -18379,7 +18379,7 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="-247" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="-247">
             <stringProp name="HTTPSampler.domain">${BASE_URL}</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -22632,6 +22632,59 @@ en=form_submit&amp;ep.form_id=login-air-quality&amp;ep.form_name=login-air-quali
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Site" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                  <stringProp name="Header.value">none</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-User" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua</stringProp>
+                  <stringProp name="Header.value">&quot;Google Chrome&quot;;v=&quot;125&quot;, &quot;Chromium&quot;;v=&quot;125&quot;, &quot;Not.A/Brand&quot;;v=&quot;24&quot;</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                  <stringProp name="Header.value">?0</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                  <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate, br, zstd</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1839609358">${Assertion}</stringProp>
