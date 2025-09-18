@@ -112,7 +112,7 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Bookmark_LocationBasedSearch_ESW">
         <stringProp name="TestPlan.comments">//204</stringProp>
         <intProp name="ThreadGroup.num_threads">350</intProp>
-        <intProp name="ThreadGroup.ramp_time">1050</intProp>
+        <intProp name="ThreadGroup.ramp_time">1200</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
         <longProp name="ThreadGroup.delay">0</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -176,7 +176,7 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Bookmark_PostcodeBasedSearch_NI">
         <stringProp name="TestPlan.comments">//204</stringProp>
         <intProp name="ThreadGroup.num_threads">350</intProp>
-        <intProp name="ThreadGroup.ramp_time">1050</intProp>
+        <intProp name="ThreadGroup.ramp_time">1200</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
         <longProp name="ThreadGroup.delay">20</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -240,7 +240,7 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Bookmark_PostcodeBasedSearch_ESW">
         <stringProp name="TestPlan.comments">//204</stringProp>
         <intProp name="ThreadGroup.num_threads">350</intProp>
-        <intProp name="ThreadGroup.ramp_time">1050</intProp>
+        <intProp name="ThreadGroup.ramp_time">1200</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
         <longProp name="ThreadGroup.delay">40</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -301,7 +301,7 @@
         </ConstantTimer>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
