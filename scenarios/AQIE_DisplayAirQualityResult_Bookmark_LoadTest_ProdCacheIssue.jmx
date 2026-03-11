@@ -5,8 +5,6 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
-      <boolProp name="TestPlan.functional_mode">false</boolProp>
-      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -112,7 +110,7 @@
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Bookmark_LocationBasedSearch_ESW">
         <stringProp name="TestPlan.comments">//350-1200-1-3600-0</stringProp>
-        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.num_threads">4</intProp>
         <intProp name="ThreadGroup.ramp_time">0</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
         <longProp name="ThreadGroup.delay">0</longProp>
@@ -120,7 +118,7 @@
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <stringProp name="LoopController.loops">1000</stringProp>
+          <stringProp name="LoopController.loops">1500</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
@@ -142,7 +140,7 @@
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Bookmark_ESW_Location" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Bookmark_ESW_Location">
             <stringProp name="HTTPSampler.domain">${BASE_URL}</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -170,7 +168,7 @@
           </hashTree>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
-          <stringProp name="ConstantTimer.delay">1000</stringProp>
+          <stringProp name="ConstantTimer.delay">750</stringProp>
           <stringProp name="TestPlan.comments">//4000</stringProp>
         </ConstantTimer>
         <hashTree/>
@@ -239,9 +237,9 @@
         </ConstantTimer>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Bookmark_PostcodeBasedSearch_ESW">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Bookmark_PostcodeBasedSearch_ESW" enabled="false">
         <stringProp name="TestPlan.comments">//350-1200-1-3600-0</stringProp>
-        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.num_threads">2</intProp>
         <intProp name="ThreadGroup.ramp_time">0</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
         <longProp name="ThreadGroup.delay">0</longProp>
@@ -249,7 +247,7 @@
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <stringProp name="LoopController.loops">1000</stringProp>
+          <stringProp name="LoopController.loops">1500</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
@@ -299,7 +297,7 @@
           </hashTree>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
-          <stringProp name="ConstantTimer.delay">1000</stringProp>
+          <stringProp name="ConstantTimer.delay">750</stringProp>
           <stringProp name="TestPlan.comments">//4000</stringProp>
         </ConstantTimer>
         <hashTree/>
