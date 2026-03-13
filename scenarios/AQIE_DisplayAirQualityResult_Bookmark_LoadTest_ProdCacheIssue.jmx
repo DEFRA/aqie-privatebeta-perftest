@@ -111,7 +111,7 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Bookmark_LocationBasedSearch_ESW">
         <stringProp name="TestPlan.comments">//350-1200-1-3600-0</stringProp>
         <intProp name="ThreadGroup.num_threads">6500</intProp>
-        <intProp name="ThreadGroup.ramp_time">260</intProp>
+        <intProp name="ThreadGroup.ramp_time">3250</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
         <longProp name="ThreadGroup.delay">0</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
