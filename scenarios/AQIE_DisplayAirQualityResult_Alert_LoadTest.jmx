@@ -3,6 +3,7 @@
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="ESW_Location">
       <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.${project.version}. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
@@ -489,7 +490,7 @@ vars.put(&quot;AlertAssertion&quot;, vars.get(&quot;AlertAssertionMobile&quot;))
         <intProp name="ThreadGroup.num_threads">255</intProp>
         <intProp name="ThreadGroup.ramp_time">765</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
-        <longProp name="ThreadGroup.delay">90</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
@@ -961,7 +962,7 @@ vars.put(&quot;AlertAssertion&quot;, vars.get(&quot;AlertAssertionEmail&quot;))<
         <intProp name="ThreadGroup.num_threads">255</intProp>
         <intProp name="ThreadGroup.ramp_time">1020</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
-        <longProp name="ThreadGroup.delay">180</longProp>
+        <longProp name="ThreadGroup.delay">90</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -1350,7 +1351,7 @@ vars.put(&quot;AlertAssertion&quot;, vars.get(&quot;AlertAssertionMobile&quot;))
         <intProp name="ThreadGroup.num_threads">255</intProp>
         <intProp name="ThreadGroup.ramp_time">1020</intProp>
         <longProp name="ThreadGroup.duration">3600</longProp>
-        <longProp name="ThreadGroup.delay">240</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
